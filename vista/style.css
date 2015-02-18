@@ -1,0 +1,85 @@
+/*header*/
+
+.header{
+    background: #ffef9b;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+header h2{
+    font-size: 4em;
+}
+
+.header2{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+header2 h2{
+    font-size: 2em;
+}
+
+header>h2,header2>h2{
+    padding-left: 2%;
+}
+
+.logSign{
+    padding-top: 6%;
+    padding-bottom: 9%;
+    padding-right: 2%;
+    padding-left: 2%;
+    background: white;
+}
+
+/*----------------*/
+
+.list-group-item{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.carpeta{
+    padding-right: 0px;
+}
+
+.flecha{
+    padding-top: 9%;
+}
+
+.iconoTipo{
+    padding-right: 4%;
+}
+
+.input-renombrar{
+    padding-right: 1%;
+}
+
+/*-------Check box-------*/
+/*
+.check{
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}*/
+
+/*-------- footer --------*/
+
+.footer{
+    background: #ffef9b;
+    padding-right: 5%;
+    padding-top: 2%;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
