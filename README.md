@@ -1,4 +1,6 @@
 # php-hosting-project
+Status: developing
+
 This is a PHP hosting project with learning purpose
 
 Installation's notes:
