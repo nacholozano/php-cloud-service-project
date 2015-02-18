@@ -1,0 +1,3 @@
+<?php
+
+$rutaUsers = '/var/www/';
