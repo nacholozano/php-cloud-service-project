@@ -52,7 +52,7 @@ function viewFolder($folder,$rutaUsers){
        if ( $folder === $rutaUsers."users/".$_SESSION["user"]."/pdf/" ){
 ?>
        <div class="col-md-1 divCorreo">
-           <button class="btn btn-default boton-envio col-md-11 col-xs-12" title="Enviará el pdf al correo asignado a la cuenta">Enviar</button>
+           <button class="btn btn-default boton-envio col-md-11 col-xs-12" title="Enviará el pdf al correo asignado a la cuenta" name="<?php echo $directorios[$i] ?>">Enviar</button>
        </div>
 <?php
         }

@@ -5,7 +5,7 @@
         <div class="Imagen input-group">
             <input type="file" id="inputImage" class="form-control">
             <span class="input-group-btn">
-                <button id="boton-enviarCorreo" class="btn btn-default">Enviar</button>
+                <button id="boton-enviarCorreo" name="" class="btn btn-default">Enviar</button>
             </span>
         </div>
         <div id="divPreview">

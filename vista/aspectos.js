@@ -51,10 +51,11 @@ $(document).ready(function(){
     $(".boton-envio").on("click",function(){
         $(".anadirImagen").fadeIn("slow");
         $(".appWrapper").fadeTo(400, 0.45);
+        $("#boton-enviarCorreo").attr('name', $(".boton-envio").attr("name") );
     });
 
     $(".spanCerrar").on("click",function(){
-        $(".anadirImagen").fadeOut("slow",function(){
+        $(".anadirImagen").fadeOut(500,function(){
             $("#preview").attr("src","");
             $("#inputImage").val("");
             $("#notImage").show(0);
@@ -81,12 +82,23 @@ $(document).ready(function(){
             default:
                 $("#inputImage").val('');
                 $("#notImage").html("Eso no era una imagen");
-        }
+            }
         }
     }
 
     $("#inputImage").change(function(){
         readURL(this);
+    });
+
+    $("#boton-enviarCorreo").on("click",function(){
+        $.ajax({
+            url: "modelo/sendEmail.php",
+            type: "GET",
+            data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
+            success: function(result){
+                alert(result);
+            }
+        });
     });
 
 });
