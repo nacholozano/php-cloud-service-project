@@ -22,16 +22,16 @@ $mail->Host = "smtp.gmail.com";
 $mail->Port = 465;
 
 //indico un usuario / clave de un usuario de gmail
-$mail->Username = "nacholozanogui@gmail.com";
-$mail->Password = "Josemanuelmaria2";
+$mail->Username = "mycloud.hosting.php@gmail.com";
+$mail->Password = "mycloudhostingphp";
 
 /*
 $mail->SetFrom('tu_correo_electronico_gmail@gmail.com', 'Nombre completo');
 $mail->AddReplyTo("tu_correo_electronico_gmail@gmail.com","Nombre completo");
 */
 
-$mail->Subject = "Envío de email usando SMTP de Gmail";
-$mail->MsgHTML("Hola que tal, esto es el cuerpo del mensaje!");
+$mail->Subject = "PDF MyCloud";
+$mail->MsgHTML("Aquí tienes tu PDF");
 $mail->AddAttachment($rutaUsers."users/".$_SESSION["user"]."/pdf/".$toSend);
 
 //indico destinatario
