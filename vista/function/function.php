@@ -48,11 +48,15 @@ function viewFolder($folder,$rutaUsers){
             si subo un archivo en la carpeta1 , la fecha de creacion que muestra
             para la carpeta1 es la misma que la del archivo que he subido
             -->
-
+<?php
+       if ( $folder === $rutaUsers."users/".$_SESSION["user"]."/pdf/" ){
+?>
        <div class="col-md-1 divCorreo">
            <button class="btn btn-default boton-envio col-md-11 col-xs-12" title="Enviará el pdf al correo asignado a la cuenta">Enviar</button>
        </div>
-
+<?php
+        }
+?>
        <div class="col-md-1 divBorrar">
         <form action='index.php' method='post'>
             <input type='hidden' name='direcBorrar' value="<?php echo $directorios[$i]?>">
