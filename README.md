@@ -1,10 +1,8 @@
 # php-hosting-project
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 Php-hosting-project with learning purpose
-=======
-=======
->>>>>>> github/master
+
+>>>> 
 Status: developing
 
 2015/02/19: Don't try this code, there is some problem I have to solve. 
@@ -17,9 +15,3 @@ Installation's notes:
 - Configure your server name, database user name, password and database name in 'conf-db.php'
 - Configure a route in your server for folder's users in 'conf-app.php'
 - Create database running 'modelo/create-db.php'
-
-
-<<<<<<< HEAD
->>>>>>> github/master
-=======
->>>>>>> github/master
