@@ -11,7 +11,7 @@ $(document).ready(function(){
     $(".check").css("margin-top", $(".contenidoList").innerHeight() / 5 );
 
     $("input.check").prettyCheckable({
-        color: 'blue'
+        color: 'blue',
     });
 
     $("label[for='toBackup']").text("");
@@ -28,7 +28,7 @@ $(document).ready(function(){
                     $(".mensaje-cloud").remove();
                 }
 
-                if( result > 2000 ){
+                if( result > 30 ){
                     $('.buttonUp').prop( "disabled", true );
 
                     $.ajax({

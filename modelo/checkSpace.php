@@ -5,7 +5,7 @@ session_start();
 include_once "../conf-app.php";
 
 $size = 0;
-$it = new RecursiveDirectoryIterator("/var/www/users/".$_SESSION["user"]."/");
+$it = new RecursiveDirectoryIterator($rutaUsers."users/".$_SESSION["user"]."/");
 
 foreach( new RecursiveIteratorIterator($it) as $fileIt ) {
     if ( is_file( $fileIt ) ) {

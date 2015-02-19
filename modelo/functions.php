@@ -31,7 +31,7 @@ function newFolder($folder,$newFolder){
 /* Subir ficheros a la carpeta actual
     $folder -->  carpeta actual
 */
-function upload($folder){
+function upload($folder,$rutaUsers){
 
     $target_dir = $folder ;  //ruta donde se va a guardar
     $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);  //coger la ruta
@@ -78,7 +78,7 @@ function createPDF($rutaUsers){
             if ( is_dir($file) ){
                 $rutaLimpia = substr($rutaLimpia,0,-2);
             }
-            $mpdf->WriteHTML('<p>'.$rutaLimpia.'</p>');
+            $mpdf->WriteHTML($rutaLimpia);
             /*
             $pdf->Write(5,$rutaLimpia);
             $pdf->Ln(4);
@@ -107,8 +107,8 @@ function createPDF($rutaUsers){
             $size = $size." b";
     }
 
-    $mpdf->WriteHTML("<p>Tamaño ocupado: ".$size.'</p>');
-    $mpdf->WriteHTML("<p>Número de archivos: ".$numFiles.'</p>');
+    $mpdf->WriteHTML("Tamaño ocupado: ".$size);
+    $mpdf->WriteHTML("Número de archivos: ".$numFiles);
     $nombre = "Unidad de ".$_SESSION["user"]."(".date('d-m-Y-h-i-s-a', time()).").pdf";
     $mpdf->Output($rutaUsers."users/".$_SESSION["user"]."/pdf/".$nombre ,"F");
 /*
@@ -178,7 +178,7 @@ function myRename($folder){
     rename( $folder.$_POST['direcNombre'] , $folder.$_POST['newName'] );
 }
 
-function checkSpace($rutaUsers){
+function checkSpace($rutaUsers,$sizeCloud){
 
     $limite = false;
 
@@ -191,7 +191,7 @@ function checkSpace($rutaUsers){
         }
     }
 
-    if ( $size > 30000 ){
+    if ( $size > $sizeCloud ){
            $limite = true;
     }
 

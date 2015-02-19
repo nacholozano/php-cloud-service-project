@@ -15,6 +15,6 @@ foreach( new RecursiveIteratorIterator($it) as $file ) {
     }
 }
 
-$size =  ($size * 100) / 2000 ;
+$size =  ($size * 100) / $sizeCloud ;
 
 echo $size."%";

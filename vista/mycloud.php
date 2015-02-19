@@ -141,7 +141,7 @@
     if( $_POST["operation"] === "createPDF" ){
         $nombre = createPDF($rutaUsers);
 
-        if( checkSpace($rutaUsers) ){
+        if( checkSpace($rutaUsers,$sizeCloud) ){
             include_once "vista/errors/notSpace.php";
             $folder = $rutaUsers."users/".$_SESSION["user"]."/pdf/";
             myDelete($folder,$nombre);
@@ -163,7 +163,7 @@
     if( $_POST["operation"] === "backup"  ){
         $rutaBackup = backup($rutaUsers);
 
-        if( checkSpace($rutaUsers) ){
+        if( checkSpace($rutaUsers,$sizeCloud) ){
             include_once "vista/errors/notSpace.php";
             myDelete($rutaBackup,"");
         }else{
