@@ -2,7 +2,6 @@
 
 Php-hosting-project with learning purpose
 
->>>> 
 Status: developing
 
 2015/02/19: Don't try this code, there is some problem I have to solve. 
