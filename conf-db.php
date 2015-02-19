@@ -1,8 +1,8 @@
 <?php
 
-$servername="localhost";
-$username="root";
-$password="usuario";
-$dbname="cloud";
+$servername="";
+$username="";
+$password="";
+$dbname="";
 
 ?>
