@@ -1,7 +1,10 @@
 # php-hosting-project
 <<<<<<< HEAD
+<<<<<<< HEAD
 Php-hosting-project with learning purpose
 =======
+=======
+>>>>>>> github/master
 Status: developing
 
 2015/02/19: Don't try this code, there is some problem I have to solve. 
@@ -16,4 +19,7 @@ Installation's notes:
 - Create database running 'modelo/create-db.php'
 
 
+<<<<<<< HEAD
+>>>>>>> github/master
+=======
 >>>>>>> github/master
