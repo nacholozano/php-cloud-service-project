@@ -107,7 +107,7 @@ function createPDF($rutaUsers){
     $pdf->Ln(4);
     $pdf->Write(5,utf8_decode("Número de archivos: " . $numFiles) );
     $pdf->Ln(4);
-    $nombre = "Unidad de ".$_SESSION["user"]."(".date('d-m-Y-h-i-s-a', time()).")";
+    $nombre = "Unidad de ".$_SESSION["user"]."(".date('d-m-Y-h-i-s-a', time()).").pdf";
     $pdf->Output( $rutaUsers."users/".$_SESSION["user"]."/pdf/".$nombre ,"F");
 
     return $nombre;
