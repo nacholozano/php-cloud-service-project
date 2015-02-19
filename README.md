@@ -1,6 +1,9 @@
 # php-hosting-project
 Status: developing
 
+2015/02/19: Don't try this code, there is some problem I have to solve. 
+Try a demo here: http://mycloud-nacholozano.rhcloud.com/
+
 This is a PHP hosting project with learning purpose
 
 Installation's notes:
