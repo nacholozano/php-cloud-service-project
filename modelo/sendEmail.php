@@ -29,11 +29,7 @@ $mail->Password = "mycloudhostingphp";
 $mail->SetFrom('tu_correo_electronico_gmail@gmail.com', 'Nombre completo');
 $mail->AddReplyTo("tu_correo_electronico_gmail@gmail.com","Nombre completo");
 */
-<<<<<<< HEAD
 $mail->SetFrom("mycloud.hosting.php@gmail.com","MyCloud");
-=======
-
->>>>>>> github/master
 $mail->Subject = "PDF MyCloud";
 $mail->MsgHTML("Aquí tienes tu PDF");
 $mail->AddAttachment($rutaUsers."users/".$_SESSION["user"]."/pdf/".$toSend);
