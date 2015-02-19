@@ -96,7 +96,6 @@ $(document).ready(function(){
             type: "GET",
             data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
             success: function(result){
-                alert(result);
             }
         });
     });
