@@ -1,4 +1,4 @@
 <?php
 
 $rutaUsers = '/var/www/';
-$sizeCloud = 30; /* bytes */
+$sizeCloud = 20000; /* bytes */

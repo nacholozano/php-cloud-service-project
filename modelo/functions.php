@@ -54,23 +54,18 @@ function createPDF($rutaUsers){
 
     require_once('mpdf60/mpdf.php');
 
+    /* PDF name */
+    $nombre = "Unidad de ".$_SESSION["user"]."(".date('d-m-Y-h-i-s-a', time()).").pdf";
+
     $numFiles = 0;
     $size = 0;
-    $parent = "$/&__%";
+    /*$parent = "$/&__%";*/
     $it = new RecursiveDirectoryIterator($rutaUsers."users/".$_SESSION["user"]."/");
 
     $mpdf=new mPDF();
     $mpdf->WriteHTML("Información de la unidad de ".$_SESSION["user"]);
+    $mpdf->WriteHTML("<br>");
 
-    /*
-    $pdf = new FPDI();
-    $pdf->SetTitle("Información de la unidad de ".$_SESSION["user"]);
-    $pdf->AddPage();
-    $pdf->SetFont('Arial');
-    $pdf->SetTextColor(0,0,0);
-    $pdf->Write(5,utf8_decode("Unidad de ".$_SESSION["user"]) );
-    $pdf->Ln(8);
-*/
     foreach(new RecursiveIteratorIterator($it) as $file) {
         if ( !(strpos($file,'/..') ) ) {
 
@@ -79,10 +74,6 @@ function createPDF($rutaUsers){
                 $rutaLimpia = substr($rutaLimpia,0,-2);
             }
             $mpdf->WriteHTML($rutaLimpia);
-            /*
-            $pdf->Write(5,$rutaLimpia);
-            $pdf->Ln(4);
-            */
         }
 
         if ( is_file( $file ) ) {
@@ -107,19 +98,10 @@ function createPDF($rutaUsers){
             $size = $size." b";
     }
 
-    $mpdf->WriteHTML("Tamaño ocupado: ".$size);
+    $mpdf->WriteHTML("<br>Tamaño ocupado: ".$size." (Tamaño sin incluir este PDF)");
     $mpdf->WriteHTML("Número de archivos: ".$numFiles);
-    $nombre = "Unidad de ".$_SESSION["user"]."(".date('d-m-Y-h-i-s-a', time()).").pdf";
+
     $mpdf->Output($rutaUsers."users/".$_SESSION["user"]."/pdf/".$nombre ,"F");
-/*
-    $pdf->Ln(4);
-    $pdf->Write(5,utf8_decode("Tamaño ocupado: " . $size) );
-    $pdf->Ln(4);
-    $pdf->Write(5,utf8_decode("Número de archivos: " . $numFiles) );
-    $pdf->Ln(4);
-    $nombre = "Unidad de ".$_SESSION["user"]."(".date('d-m-Y-h-i-s-a', time()).").pdf";
-    $pdf->Output( $rutaUsers."users/".$_SESSION["user"]."/pdf/".$nombre ,"F");
-*/
 
     return $nombre;
 }

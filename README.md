@@ -1,11 +1,11 @@
 # php-hosting-project
 
+This is a PHP hosting project with learning purpose
+
 Status: developing
 
 2015/02/19: Don't try this code, there is some problem I have to solve. 
 Try a demo here: http://mycloud-nacholozano.rhcloud.com/
-
-This is a PHP hosting project with learning purpose
 
 Installation's notes:
 
@@ -14,4 +14,4 @@ Installation's notes:
 - Create database running 'modelo/create-db.php'
 
 
-/* TODO: Check createPDF and checkSize work fine */
+/* TODO: Check pdf reports  */

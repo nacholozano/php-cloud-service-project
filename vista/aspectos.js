@@ -28,7 +28,7 @@ $(document).ready(function(){
                     $(".mensaje-cloud").remove();
                 }
 
-                if( result > 30 ){
+                if( result > 20000 ){
                     $('.buttonUp').prop( "disabled", true );
 
                     $.ajax({
