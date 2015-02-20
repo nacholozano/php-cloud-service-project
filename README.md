@@ -1,6 +1,6 @@
 # php-hosting-project
 
-This is a PHP hosting project with learning purpose
+> This is a PHP hosting project with learning purpose
 
 Status: developing
 
