@@ -24,7 +24,7 @@ I know possible solutions for this problems. But I don't have time to fix them.
 
 ### Features
 
-- [x] Create folder 
+- [x] Create folders 
 - [x] Breadcrumbs
 - [x] Upload files
 - [x] Backup to selected folders or files
