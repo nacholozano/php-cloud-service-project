@@ -13,12 +13,15 @@ $pdfToOpen = $rutaUsers."users/".$_SESSION["user"]."/pdf/".$toSend;
 
 /* ---------- Añadir imagen al PDF ---------- */
 $mpdf = new mPDF();
+$mpdf->SetSubject("Listado de mi unidad");
+$mpdf->SetAuthor($_SESSION["user"]);
+$mpdf->SetTitle("Unidad de ".$_SESSION["user"]);
 $mpdf->SetImportUse();
 $pdfFile = $mpdf->SetSourceFile($pdfToOpen);
 $template = $mpdf->ImportPage($pdfFile);
 $mpdf->UseTemplate($template);
 $mpdf->AddPage();
-$mpdf->SetFooter("<img src='".$tmp.$imageName."'/>");
+$mpdf->SetHTMLFooter ("<img src='".$tmp.$imageName."'/>");
 $mpdf->Output($tmp.$toSend ,"F");
 
 /* ---------- Enviar PDF ---------- */

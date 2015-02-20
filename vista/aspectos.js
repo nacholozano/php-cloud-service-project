@@ -57,7 +57,7 @@ $(document).ready(function(){
     $('#loadImage').hide();
   */
     $(".spanCerrar").on("click",function(){
-        $(".anadirImagen").fadeOut(500,function(){
+        $(".anadirImagen").fadeOut(400,function(){
             $("#preview").attr("src","");
             $("#inputImage").val("");
             $("#notImage").show(0);
@@ -91,11 +91,7 @@ $(document).ready(function(){
     $("#inputImage").change(function(){
         readURL(this);
     });
-/*
-    $("#boton-enviarCorreo").on("click",function(){
 
-    });
-*/
     $("#uploadForm").on('submit',(function(e) {
 
         var nombre = $("#inputImage").val().split('\\');
