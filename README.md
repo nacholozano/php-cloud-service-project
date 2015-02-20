@@ -18,7 +18,7 @@ Try a demo here: http://mycloud-nacholozano.rhcloud.com/
 
 ### Known problems
 
-- Active JavaScript in your browser. The file size check use JavaScript before uploading any file. I know I also have to do the check in the server-side.
+- Active JavaScript in your browser. The file size check use JavaScript before uploading any file. I know I also have to do the file size check in the server-side.
 - Problem with breadcrumbs when you migrate the project to other server.
 - The PDF reports don't add the PDF size.
 
