@@ -53,7 +53,9 @@ $(document).ready(function(){
         $(".appWrapper").fadeTo(400, 0.45);
         $("#boton-enviarCorreo").attr('name', $(".boton-envio").attr("name") );
     });
-
+/*
+    $('#loadImage').hide();
+  */
     $(".spanCerrar").on("click",function(){
         $(".anadirImagen").fadeOut(500,function(){
             $("#preview").attr("src","");
@@ -89,17 +91,11 @@ $(document).ready(function(){
     $("#inputImage").change(function(){
         readURL(this);
     });
-
+/*
     $("#boton-enviarCorreo").on("click",function(){
-        $.ajax({
-            url: "modelo/sendEmail.php",
-            type: "GET",
-            data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
-            success: function(result){
-            }
-        });
-    });
 
+    });
+*/
     $("#uploadForm").on('submit',(function(e) {
 		e.preventDefault();
 		$.ajax({
@@ -110,10 +106,30 @@ $(document).ready(function(){
     	    cache: false,
 			processData:false,
 			success: function(data){
-                alert("Finish")
+                $.ajax({
+            beforeSend: function(){
+                $('#loadImage').show();
             },
-		  	error: function(){
-	    	}
+            url: "modelo/sendEmail.php",
+            type: "GET",
+            data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
+            success: function(result){
+                $('#loadImage').hide();
+                $(".anadirImagen").fadeOut(400);
+                $(".appWrapper").fadeTo(400, 1);
+                $.ajax({
+                       url: 'vista/success/sentMessage.php',
+                       success: function(html) {
+                           if( $(".mensaje-cloud") !== null ){
+                               $(".mensaje-cloud").remove();
+                           }
+                           $(".bread-c").append(html);
+                       }
+                });
+            }
+        });
+            },
+		  	error: function(){}
 	   });
 	}));
 

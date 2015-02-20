@@ -12,6 +12,7 @@
             </form>
         <div id="divPreview">
             <img src="" id="preview" alt="">
+            <div id="loadImage"><img src="imagenes/ajax-loader.gif"></div>
             <p class="alert alert-danger" role='alert' id="notImage">No has seleccionado ninguna imagen</p>
         </div>
 </div>
