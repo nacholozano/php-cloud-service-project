@@ -97,6 +97,10 @@ $(document).ready(function(){
     });
 */
     $("#uploadForm").on('submit',(function(e) {
+
+        var nombre = $("#inputImage").val().split('\\');
+        var num = nombre[nombre.length-1];
+
 		e.preventDefault();
 		$.ajax({
         	beforeSend: function(){
@@ -111,10 +115,11 @@ $(document).ready(function(){
 			processData:false,
 			success: function(data){
                 $.ajax({
-
                     url: "modelo/sendEmail.php",
                     type: "GET",
-                    data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
+                    data: { nombrePDF : $("#boton-enviarCorreo").attr('name'),
+                            inputImage: num
+                          },
                     success: function(result){
                         $('#loadImage').hide();
                         $(".anadirImagen").fadeOut(400);
