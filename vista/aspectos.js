@@ -118,7 +118,12 @@ $(document).ready(function(){
                     success: function(result){
                         $('#loadImage').hide();
                         $(".anadirImagen").fadeOut(400);
-                        $(".appWrapper").fadeTo(400, 1);
+                        $(".appWrapper").fadeTo(400, 1,function(){
+                           $("#preview").attr("src","");
+                           $("#inputImage").val("");
+                           $("#notImage").show(0);
+                           $("#notImage").html("No has seleccionado ninguna imagen");
+                        });
                         $('#preview').fadeTo(400,1);
                         $.ajax({
                                url: 'vista/success/sentMessage.php',
