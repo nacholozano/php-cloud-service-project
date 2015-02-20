@@ -100,6 +100,23 @@ $(document).ready(function(){
         });
     });
 
+    $("#uploadForm").on('submit',(function(e) {
+		e.preventDefault();
+		$.ajax({
+        	url: "modelo/upload.php",
+			type: "POST",
+			data:  new FormData(this),
+			contentType: false,
+    	    cache: false,
+			processData:false,
+			success: function(data){
+                alert("Finish")
+            },
+		  	error: function(){
+	    	}
+	   });
+	}));
+
 });
 
 /*backups se ponen al mismo tamaño que las carpetas mientras hago zoom*/
