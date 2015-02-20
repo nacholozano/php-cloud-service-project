@@ -1,8 +1,8 @@
 # php-hosting-project
-```
+
 This is a PHP hosting project with learning purpose
-```
-Status: developing
+
+`Status: developing`
 
 2015/02/19: Don't try this code, there are some problems I have to solve. 
 Try a demo here: http://mycloud-nacholozano.rhcloud.com/
