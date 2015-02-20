@@ -13,7 +13,7 @@ Try a demo here: http://mycloud-nacholozano.rhcloud.com/
 ### Installation's notes
 
 - Configure your server name, database user name, password and database name in 'conf-db.php'
-- Configure a route in your server for folder's users in 'conf-app.php'
+- Configure a route in your server for folder's users and other route for tmp folder in 'conf-app.php'
 - Create database running 'modelo/create-db.php'
 
 ### Known problems
