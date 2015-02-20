@@ -29,8 +29,9 @@ I know possible solutions for this problems. But I don't have time to fix them.
 - [x] Create folders 
 - [x] Breadcrumbs
 - [x] Upload files
-- [x] Backup to selected folders or files
+- [x] Backup to selected folders and files
 - [x] Create PDF with your folder information
-- [x] Deleted folder and files
-- [x] Rename folder and files
+- [x] Delete folders and files
+- [x] Rename folders and files
+- [x] Download folders and files
 - [X] Add an image to a PDF file and send to your email account
