@@ -2,6 +2,8 @@
 
 This is a PHP hosting project with learning purpose with PHP in server-side and jQuery in client-side.
 
+[![PHP version] (http://php.net/downloads.php) ]
+
 I have tried to use MVC. The 'index.php' would be the controller.
 
 Status: developing
