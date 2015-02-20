@@ -33,5 +33,5 @@ I know possible solutions for this problems. But I don't have time to fix them.
 - [x] Create PDF with your folder information
 - [x] Delete folders and files
 - [x] Rename folders and files
-- [x] Download folders and files
+- [x] Download files
 - [X] Add an image to a PDF file and send to your email account
