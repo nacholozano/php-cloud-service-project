@@ -6,7 +6,7 @@ I have tried to use MVC. The 'index.php' would be the controller.
 
 Status: developing
 
-2015/02/19: Don't try this code, there are some problems I have to solve. 
+2015/02/20: Don't try this code, there are some problems I have to solve. 
 
 Try a demo here: http://mycloud-nacholozano.rhcloud.com/
 
