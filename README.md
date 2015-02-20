@@ -24,4 +24,11 @@ I know possible solutions for this problems. But I don't have time to fix them.
 
 ### Features
 
-
+[x] Create folder 
+[x] Breadcrumbs
+[x] Upload files
+[x] Backup to selected folders or files
+[x] Create PDF with your folder information
+[x] Deleted folder and files
+[x] Rename folder and files
+[X] Add an image to a PDF file and send to your email account
