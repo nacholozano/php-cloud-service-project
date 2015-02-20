@@ -16,9 +16,7 @@ Installation's notes:
 Known problems:
 
 - Activate JavaScript in your browser. The file size check use JavaScript before uploading any file. I know I also have to do the check in the server-side.
-
 - Problem with breadcrumbs when you migrate the project to other server.
-
 - The PDF reports don't add the PDF size.
 
 I know possible solutions for this problems. But I don't have time to fix them. 
