@@ -99,7 +99,11 @@ $(document).ready(function(){
     $("#uploadForm").on('submit',(function(e) {
 		e.preventDefault();
 		$.ajax({
-        	url: "modelo/upload.php",
+        	beforeSend: function(){
+                $('#loadImage').show();
+                $('#preview').fadeTo(400,0.4);
+            },
+            url: "modelo/upload.php",
 			type: "POST",
 			data:  new FormData(this),
 			contentType: false,
@@ -107,27 +111,26 @@ $(document).ready(function(){
 			processData:false,
 			success: function(data){
                 $.ajax({
-            beforeSend: function(){
-                $('#loadImage').show();
-            },
-            url: "modelo/sendEmail.php",
-            type: "GET",
-            data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
-            success: function(result){
-                $('#loadImage').hide();
-                $(".anadirImagen").fadeOut(400);
-                $(".appWrapper").fadeTo(400, 1);
-                $.ajax({
-                       url: 'vista/success/sentMessage.php',
-                       success: function(html) {
-                           if( $(".mensaje-cloud") !== null ){
-                               $(".mensaje-cloud").remove();
-                           }
-                           $(".bread-c").append(html);
-                       }
+
+                    url: "modelo/sendEmail.php",
+                    type: "GET",
+                    data: { nombrePDF : $("#boton-enviarCorreo").attr('name') },
+                    success: function(result){
+                        $('#loadImage').hide();
+                        $(".anadirImagen").fadeOut(400);
+                        $(".appWrapper").fadeTo(400, 1);
+                        $('#preview').fadeTo(400,1);
+                        $.ajax({
+                               url: 'vista/success/sentMessage.php',
+                               success: function(html) {
+                                   if( $(".mensaje-cloud") !== null ){
+                                       $(".mensaje-cloud").remove();
+                                   }
+                                   $(".bread-c").append(html);
+                               }
+                        });
+                    }
                 });
-            }
-        });
             },
 		  	error: function(){}
 	   });
