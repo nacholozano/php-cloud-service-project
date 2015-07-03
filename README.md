@@ -1,6 +1,6 @@
-# php-hosting-project
+# php-cloud-service-project
 
-This is a PHP hosting project with learning purpose with PHP in server-side and jQuery in client-side.
+This is a PHP cloud service project with learning purpose with PHP in server-side and jQuery in client-side.
 
 I have tried to use MVC. The 'index.php' would be the controller.
 
