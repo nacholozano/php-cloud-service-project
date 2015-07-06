@@ -2,12 +2,15 @@
 
 <b>Third school year project</b>
 
-This is a PHP cloud service project with learning purpose with PHP in server-side and jQuery and MaterializeCSS in client-side.
+This is a PHP cloud service project with learning purpose with PHP and MySQL in server-side and jQuery and Bootstrap3 in client-side.
 
 I have tried to use MVC. The 'index.php' would be the controller.
 
 
 Try a demo here: http://mycloud-nacholozano.rhcloud.com/
+User/Email: nahcolozanogui@gmail.com<br>
+Pass: nacho
+
 
 ### Installation's notes
 
