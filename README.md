@@ -7,8 +7,8 @@ This is a PHP cloud service project with learning purpose with PHP and MySQL in 
 I have tried to use MVC. The 'index.php' would be the controller.
 
 
-Try a demo here: http://mycloud-nacholozano.rhcloud.com/
-User/Email: nahcolozanogui@gmail.com<br>
+Try a demo here: http://mycloud-nacholozano.rhcloud.com/ <br>
+User/Email: nacholozanogui@gmail.com <br>
 Pass: nacho
 
 
