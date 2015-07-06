@@ -6,7 +6,6 @@ This is a PHP cloud service project with learning purpose with PHP in server-sid
 
 I have tried to use MVC. The 'index.php' would be the controller.
 
-Status: developing
 
 Try a demo here: http://mycloud-nacholozano.rhcloud.com/
 
