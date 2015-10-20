@@ -8,6 +8,9 @@ I have tried to use MVC. The 'index.php' would be the controller.
 
 
 Try a demo here: http://mycloud-nacholozano.rhcloud.com/ <br>
+
+<b> Session </b>
+
 Email: nacholozanogui@gmail.com <br>
 Pass: nacho
 
